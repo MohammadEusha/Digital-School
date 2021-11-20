@@ -96,7 +96,12 @@ const Login = () => {
                   )}
                 </div>
                 <div className='d-flex justify-content-end'>
-                  <h4 className='my-3 text-primary'>Forget Password</h4>
+                  <h4
+                    style={{ cursor: 'pointer' }}
+                    className='my-3 text-primary'
+                  >
+                    Forget Password
+                  </h4>
                 </div>
 
                 <div className='text-center '>
