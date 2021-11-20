@@ -116,7 +116,7 @@ const Login = () => {
       </div>
       <div
         className='bg-warning m-1 mt-0 text-warning'
-        style={{ height: '50px' }}
+        style={{ height: '7vh' }}
       ></div>
     </section>
   );
