@@ -1,3 +1,5 @@
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -12,7 +14,7 @@ const Login = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <section className='container'>
+    <section className='container pt-5'>
       <div className='row '>
         <div className='col-md-6'>
           <h1>
@@ -27,7 +29,7 @@ const Login = () => {
             <input
               name='email'
               type='email'
-              className='signinp'
+              className='rounded-pill form-control form-control-lg'
               {...register('email', {
                 required: true,
                 pattern:
@@ -39,14 +41,14 @@ const Login = () => {
               {errors.email?.type === 'required' && (
                 <span className='text-danger'>
                   {' '}
-                  <i class='fas fa-exclamation-triangle pr-2'></i> Email is
+                  <FontAwesomeIcon icon={faExclamationTriangle} /> Email is
                   required
                 </span>
               )}
               {errors.email?.type === 'pattern' ? (
                 <span className='text-danger'>
                   {' '}
-                  <i class='fas fa-exclamation-triangle pr-2'></i> Invalid Email
+                  <FontAwesomeIcon icon={faExclamationTriangle} /> Invalid Email
                   Structure
                 </span>
               ) : (
@@ -66,7 +68,7 @@ const Login = () => {
 
             <input
               name='password'
-              className='signinp'
+              className='rounded-pill form-control form-control-lg'
               type='password'
               autoComplete='off'
               {...register('password', {
@@ -80,7 +82,7 @@ const Login = () => {
               {errors.password?.type === 'required' && (
                 <span className='text-danger'>
                   {' '}
-                  <i class='fas fa-exclamation-triangle pr-2'></i> Password
+                  <FontAwesomeIcon icon={faExclamationTriangle} /> Password
                   Field is required
                 </span>
               )}
@@ -93,8 +95,8 @@ const Login = () => {
                 // </span>
                 <span className='text-danger'>
                   {' '}
-                  <i class='fas fa-exclamation-triangle pr-2'></i>Invalid
-                  Password Structure.
+                  <FontAwesomeIcon icon={faExclamationTriangle} />
+                  Invalid Password Structure.
                 </span>
               ) : (
                 ''
