@@ -4,7 +4,6 @@ import './App.css';
 import Login from './Components/LoginPage/Login';
 import PrivateRoute from './Components/LoginPage/privateRoute';
 import StudentsBioData from './Components/StudentsBioData/StudentsBioData';
-import StudentsPaymentData from './Components/StudentsPaymentData/StudentsPaymentData';
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -17,9 +16,6 @@ function App() {
           </Route>
           <PrivateRoute path='/bioData'>
             <StudentsBioData />
-          </PrivateRoute>
-          <PrivateRoute path='/payment'>
-            <StudentsPaymentData />
           </PrivateRoute>
           <Route exact path='/'>
             <Login />

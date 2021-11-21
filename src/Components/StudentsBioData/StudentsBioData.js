@@ -119,33 +119,33 @@ const StudentsBioData = () => {
                   style={{ cursor: 'pointer' }}
                   onClick={(e) => setInfo(e.target.value)}
                   value='Fees'
-                  className='border-bottom border-3 btn pe-5 '
+                  className='border-bottom border-3 btn mt-2 pe-5 '
                 >
                   Fees
                 </button>
               </div>
 
               <div>
-                <button className='border-bottom border-3 pe-5 btn'>
+                <button className='border-bottom border-3 mt-2 pe-5 btn'>
                   {' '}
                   Events{' '}
                 </button>
               </div>
               <div>
-                <button className='border-bottom border-3 pe-5 btn'>
+                <button className='border-bottom border-3 mt-2 pe-5 btn'>
                   {' '}
                   Diary{' '}
                 </button>
               </div>
 
               <div>
-                <button className='border-bottom border-3 pe-5 btn'>
+                <button className='border-bottom border-3 mt-2 pe-5 btn'>
                   {' '}
                   Timetable{' '}
                 </button>
               </div>
               <div>
-                <button className='border-bottom border-3 pe-5 btn'>
+                <button className='border-bottom border-3 mt-2 pe-5 btn'>
                   {' '}
                   Results{' '}
                 </button>
@@ -155,7 +155,7 @@ const StudentsBioData = () => {
               <button
                 onClick={(e) => setInfo(e.target.value)}
                 value='Profile'
-                className='border-bottom border-3 pe-5 btn '
+                className='border-bottom border-3 pe-5 btn mt-2 '
               >
                 {' '}
                 Profile{' '}
