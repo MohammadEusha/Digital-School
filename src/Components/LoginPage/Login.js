@@ -176,7 +176,7 @@ const Login = () => {
 
   return (
     <section>
-      <div className='border border-1  border-warning m-1 mb-0 b '>
+      <div className='border border-1  border-warning m-1 mb-0 bb '>
         <div className='container Middler'>
           <div className='row  '>
             <div className='col-md-6'>

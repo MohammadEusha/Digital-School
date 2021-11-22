@@ -1,11 +1,14 @@
-.b {
+.bb {
   height: 92vh;
 }
 
+@media (min-width: 1200px) {
+  .b {
+    height: 92vh;
+  }
+}
+
 .Middler {
-  /* padding: 18% 0;
-  border: 3px solid green;
-  text-align: center; */
   position: absolute;
   left: 50%;
   top: 50%;

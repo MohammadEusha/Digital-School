@@ -85,24 +85,26 @@ const StudentsBioData = () => {
         <div class='container-fluid card border border-1  border-warning'>
           <div className='row'>
             {studentsData.map((student) => (
-              <div className='col-md-4 border-end border-bottom border-1 border-warning '>
+              <div className='col-xxl-4 col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12 border-end border-bottom border-1 border-warning '>
                 <div
                   onClick={() => setStudentId(student.id)}
                   style={{ cursor: 'pointer' }}
                   class='row g-0 '
                 >
-                  <div class='col-md-7 p-2'>
-                    <div class='card-text d-flex'>
-                      <p className='col-md-5'>Students Name </p>
-                      <p className='border-bottom border-3 border-dark col-md-7 text-center'>
-                        {student.studentName}
-                      </p>
-                    </div>
-                    <div class='card-text d-flex'>
-                      <p className='col-md-5'>Enrollment No </p>
-                      <p className='border-bottom border-3 border-dark col-md-7 text-center'>
-                        {student.enrollmentNo}
-                      </p>
+                  <div class='col-md-7 p-2 '>
+                    <div className='mt-4'>
+                      <div class='card-text d-flex'>
+                        <p className='col-md-7 col-6'>Students Name </p>
+                        <p className='border-bottom border-3 border-dark col-md-5 col-6 text-center'>
+                          {student.studentName}
+                        </p>
+                      </div>
+                      <div class='card-text d-flex'>
+                        <p className='col-md-7 col-6'>Enrollment No </p>
+                        <p className='border-bottom border-3 border-dark col-md-5 text-center col-6 '>
+                          {student.enrollmentNo}
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div class='col-md-5 p-3'>
@@ -112,88 +114,74 @@ const StudentsBioData = () => {
               </div>
             ))}
           </div>
-          <div className='d-flex justify-content-between row mb-3'>
-            <div className='d-flex justify-content-between col-md-7'>
-              <div>
-                <button
-                  style={{ cursor: 'pointer' }}
-                  onClick={(e) => setInfo(e.target.value)}
-                  value='Fees'
-                  className='border-bottom border-3 btn mt-2 pe-5 '
-                >
-                  Fees
-                </button>
-              </div>
-
-              <div>
-                <button className='border-bottom border-3 mt-2 pe-5 btn'>
-                  {' '}
-                  Events{' '}
-                </button>
-              </div>
-              <div>
-                <button className='border-bottom border-3 mt-2 pe-5 btn'>
-                  {' '}
-                  Diary{' '}
-                </button>
-              </div>
-
-              <div>
-                <button className='border-bottom border-3 mt-2 pe-5 btn'>
-                  {' '}
-                  Timetable{' '}
-                </button>
-              </div>
-              <div>
-                <button className='border-bottom border-3 mt-2 pe-5 btn'>
-                  {' '}
-                  Results{' '}
-                </button>
-              </div>
+          <div className='row'>
+            <div className='col-xxl-10 col-xl-10 col-lg-10  col-md-12 col-sm-12 col-xs-12'>
+              <button
+                onClick={(e) => setInfo(e.target.value)}
+                value='Fees'
+                className='my-2 me-2 me-xxl-5 me-xl-5 me-lg-5 me-md-4 me-sm-2 me-xs-2 btn border-bottom border-2 pe-5'
+              >
+                Fees
+              </button>
+              <button className='my-2 me-2 me-xxl-5 me-xl-5 me-lg-5 me-md-4 me-sm-2 me-xs-2 btn border-bottom border-2 pe-5'>
+                Events
+              </button>
+              <button className='my-2 me-2 me-xxl-5 me-xl-5 me-lg-5 me-md-4 me-sm-2 me-xs-2 btn border-bottom border-2 pe-5'>
+                Diary
+              </button>
+              <button className='my-2 me-2 me-xxl-5 me-xl-5 me-lg-5 me-md-4 me-sm-2 me-xs-2 btn border-bottom border-2 pe-5'>
+                Timetable
+              </button>
+              <button className='my-2 me-2 me-xxl-5 me-xl-5 me-lg-5 me-md-4 me-sm-2 me-xs-2 btn border-bottom border-2 pe-5'>
+                Results
+              </button>
             </div>
-            <div className=' col-md-2'>
+            <div className='col-md-2 text-md-end text-start'>
               <button
                 onClick={(e) => setInfo(e.target.value)}
                 value='Profile'
-                className='border-bottom border-3 pe-5 btn mt-2 '
+                className='my-2 btn border-bottom border-2 pe-5'
               >
-                {' '}
-                Profile{' '}
+                Profile
               </button>
             </div>
           </div>
         </div>
 
         {info === profiles ? (
-          <div className='border border-1  mt-4 col-md-7'>
-            <div className='border-bottom p-3'>
-              <span>Class: {studentData.class}</span>
-              <br />
-              <span>House: {studentData.house}</span>
-              <br />
-              <span>Date Of Birth: {studentData.dateOfBirth}</span>
-            </div>
+          <div className='d-flex justify-content-center my-4'>
+            <div className='border border-3 rounded  mt-4 col-xxl-10 col-xl-10 col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+              <div className='border-bottom border-3 p-3 py-5'>
+                <span>
+                  <span className='fw-bold'>Class :</span> {studentData.class}
+                </span>
+                <br />
+                <span>House: {studentData.house}</span>
+                <br />
+                <span>Date Of Birth: {studentData.dateOfBirth}</span>
+              </div>
 
-            <div>
-              <div className='row'>
-                <div className='col-md-7 border-end ps-4 py-3 d-flex'>
-                  <span>Address:</span>{' '}
-                  <span className='d-grid ms-3'>
-                    <span>Lane 1 {studentData.line1}</span>
-                    <span>Lane 2 {studentData.line2}</span>
-                    <span>State {studentData.state}</span>
-                    <span>City{studentData.city}</span>
-                    <span>Pin {studentData.pin}</span>
-                  </span>
-                </div>
-                <div className='col-md-5 p-3'>
-                  <span>Blood Group: {studentData.bloodGroup}</span>
-                  <br />
-                  <span>Eyes: {studentData.eyes}</span>
-                  <br />
-                  <span>Ears: {studentData.ears}</span>
-                  <br />
-                  <span>Allergic To: {studentData.alergetic}</span>
+              <div>
+                <div className='row'>
+                  <div className='col-md-7 border-end border-3 ps-4 py-5 d-flex'>
+                    <span>Address:</span>{' '}
+                    <span className='d-grid ms-3'>
+                      <span>Lane 1 {studentData.line1}</span>
+                      <span>Lane 2 {studentData.line2}</span>
+                      <span>State {studentData.state}</span>
+                      <span>City{studentData.city}</span>
+                      <span>Pin {studentData.pin}</span>
+                    </span>
+                  </div>
+                  <div className='col-md-5 p-3 py-5 ps-4'>
+                    <span>Blood Group: {studentData.bloodGroup}</span>
+                    <br />
+                    <span>Eyes: {studentData.eyes}</span>
+                    <br />
+                    <span>Ears: {studentData.ears}</span>
+                    <br />
+                    <span>Allergic To: {studentData.alergetic}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -203,19 +191,44 @@ const StudentsBioData = () => {
         )}
 
         {info === fee ? (
-          <div className='row'>
-            <div className='col-md-8'>
-              <table class='table '>
+          <div className='row mt-5 pt-3'>
+            <div className='col-xxl-9 col-xl-9 col-lg-8 col-md-12 col-sm-12 col-xs-12'>
+              <table class='table table-hover border'>
                 <thead>
                   <tr>
-                    <th scope='col'>Month</th>
-                    <th scope='col'>Due Amount</th>
-                    <th scope='col'>Amount Paid</th>
-                    <th scope='col'>Balance</th>
-                    <th scope='col'>View</th>
-                    <th scope='col'>Status</th>
-                    <th scope='col'>print</th>
-                    <th scope='col'>Pay</th>
+                    <th className='pb-3' scope='col'>
+                      Month
+                    </th>
+                    <th className='pb-3' scope='col'>
+                      Due Amount
+                    </th>
+                    <th className='pb-3' scope='col'>
+                      Amount Paid
+                    </th>
+                    <th className='pb-3' scope='col'>
+                      Balance
+                    </th>
+                    <th className='pb-3' scope='col'>
+                      View
+                    </th>
+                    <th className='pb-3' scope='col'>
+                      Status
+                    </th>
+                    <th className='pb-3' scope='col'>
+                      print
+                    </th>
+                    <th scope='col'>
+                      {' '}
+                      <span
+                        onClick={displayRazorpay}
+                        style={{
+                          backgroundColor: '#ffc107',
+                        }}
+                        className='btn btn-outline-warning text-dark fw-bold col-12'
+                      >
+                        Pay All
+                      </span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -237,8 +250,11 @@ const StudentsBioData = () => {
                     <td>-</td>
                     <td>
                       <span
+                        style={{
+                          backgroundColor: '#ffda6a',
+                        }}
                         onClick={displayRazorpay}
-                        className='btn btn-warning bg-warning  col-12'
+                        className='btn  col-12'
                       >
                         Pay
                       </span>
@@ -261,7 +277,12 @@ const StudentsBioData = () => {
                     <td>OverDue</td>
                     <td>-</td>
                     <td>
-                      <span className='btn btn-warning bg-warning  col-12'>
+                      <span
+                        style={{
+                          backgroundColor: '#ffda6a',
+                        }}
+                        className='btn btn-warning   col-12'
+                      >
                         Pay
                       </span>
                     </td>
@@ -283,7 +304,12 @@ const StudentsBioData = () => {
                     <td></td>
                     <td>-</td>
                     <td>
-                      <span className='btn btn-warning bg-warning  col-12'>
+                      <span
+                        style={{
+                          backgroundColor: '#ffda6a',
+                        }}
+                        className='btn btn-warning   col-12'
+                      >
                         Pay
                       </span>
                     </td>
@@ -305,7 +331,12 @@ const StudentsBioData = () => {
                     <td></td>
                     <td>-</td>
                     <td>
-                      <span className='btn btn-warning bg-warning  col-12'>
+                      <span
+                        style={{
+                          backgroundColor: '#ffda6a',
+                        }}
+                        className='btn btn-warning   col-12'
+                      >
                         Pay
                       </span>
                     </td>
@@ -327,7 +358,12 @@ const StudentsBioData = () => {
                     <td></td>
                     <td>-</td>
                     <td>
-                      <span className='btn btn-warning bg-warning  col-12'>
+                      <span
+                        style={{
+                          backgroundColor: '#ffda6a',
+                        }}
+                        className='btn btn-warning   col-12'
+                      >
                         Pay
                       </span>
                     </td>
@@ -335,36 +371,36 @@ const StudentsBioData = () => {
                 </tbody>
               </table>
             </div>
-            <div className='col-md-4 pt-3'>
+            <div className='col-xxl-3 col-xl-3 col-lg-4 col-md-12 col-sm-12 col-xs-12'>
               {details.length > 0 ? (
                 <div>
                   <div class='card'>
                     <div class='card-header text-center'>Mar</div>
                     <ul class='list-group list-group-flush'>
-                      <div class='list-group-item d-flex justify-content-between border-0'>
-                        <p>Tuition Free</p>
-                        <p>8000</p>
-                      </div>
-                      <div class='list-group-item d-flex justify-content-between border-0'>
-                        <p>Computer Fee</p>
-                        <p>1200</p>
-                      </div>
-                      <div class='list-group-item d-flex justify-content-between '>
-                        <p>Lab Fee</p>
-                        <p>2300</p>
-                      </div>
-                      <div class='list-group-item d-flex justify-content-between '>
-                        <p></p>
-                        <p>8500</p>
-                      </div>
-                      <div class='list-group-item d-flex justify-content-between'>
-                        <p>Sibling Discount</p>
-                        <p>500</p>
-                      </div>
-                      <div class='list-group-item d-flex justify-content-between fw-bold'>
-                        <p>Net Fee</p>
-                        <p>8000</p>
-                      </div>
+                      <spam class='list-group-item d-flex justify-content-between'>
+                        <span>Tuition Free</span>
+                        <span>8000</span>
+                      </spam>
+                      <span class='list-group-item d-flex justify-content-between'>
+                        <span>Computer Fee</span>
+                        <span>1200</span>
+                      </span>
+                      <span class='list-group-item d-flex justify-content-between '>
+                        <span>Lab Fee</span>
+                        <span>2300</span>
+                      </span>
+                      <span class='list-group-item d-flex justify-content-between '>
+                        <span></span>
+                        <span>8500</span>
+                      </span>
+                      <span class='list-group-item d-flex justify-content-between'>
+                        <span>Sibling Discount</span>
+                        <span>500</span>
+                      </span>
+                      <span class='list-group-item d-flex justify-content-between fw-bold'>
+                        <span>Net Fee</span>
+                        <span>8000</span>
+                      </span>
 
                       <div
                         style={{
