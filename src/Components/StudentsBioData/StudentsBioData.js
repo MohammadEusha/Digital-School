@@ -85,11 +85,11 @@ const StudentsBioData = () => {
         <div class='container-fluid card border border-1  border-warning'>
           <div className='row'>
             {studentsData.map((student) => (
-              <div className='col-xxl-4 col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12 border-end border-bottom border-1 border-warning '>
+              <button className='col-xxl-4 col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12 border-end border-bottom border-1 border-warning btn'>
                 <div
                   onClick={() => setStudentId(student.id)}
                   style={{ cursor: 'pointer' }}
-                  class='row g-0 '
+                  class='row g-0'
                 >
                   <div class='col-md-7 p-2 '>
                     <div className='mt-4'>
@@ -111,7 +111,7 @@ const StudentsBioData = () => {
                     <img src={student.image} class='img-fluid' alt='...' />
                   </div>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
           <div className='row'>
@@ -149,40 +149,53 @@ const StudentsBioData = () => {
         </div>
 
         {info === profiles ? (
-          <div className='d-flex justify-content-center my-4'>
-            <div className='border border-3 rounded  mt-4 col-xxl-10 col-xl-10 col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-              <div className='border-bottom border-3 p-3 py-5'>
+          <div className='container border my-5'>
+            <div className='row'>
+              <div className='col-md-12 border p-4'>
                 <span>
                   <span className='fw-bold'>Class :</span> {studentData.class}
                 </span>
                 <br />
-                <span>House: {studentData.house}</span>
+                <span>
+                  <span className='fw-bold'>House :</span> {studentData.house}
+                </span>
                 <br />
-                <span>Date Of Birth: {studentData.dateOfBirth}</span>
+                <span>
+                  <span className='fw-bold'>Date Of Birth :</span>{' '}
+                  {studentData.dateOfBirth}
+                </span>
               </div>
-
-              <div>
-                <div className='row'>
-                  <div className='col-md-7 border-end border-3 ps-4 py-5 d-flex'>
-                    <span>Address:</span>{' '}
-                    <span className='d-grid ms-3'>
-                      <span>Lane 1 {studentData.line1}</span>
-                      <span>Lane 2 {studentData.line2}</span>
-                      <span>State {studentData.state}</span>
-                      <span>City{studentData.city}</span>
-                      <span>Pin {studentData.pin}</span>
-                    </span>
-                  </div>
-                  <div className='col-md-5 p-3 py-5 ps-4'>
-                    <span>Blood Group: {studentData.bloodGroup}</span>
-                    <br />
-                    <span>Eyes: {studentData.eyes}</span>
-                    <br />
-                    <span>Ears: {studentData.ears}</span>
-                    <br />
-                    <span>Allergic To: {studentData.alergetic}</span>
-                  </div>
-                </div>
+              <div className='col-md-6  border p-4'>
+                {' '}
+                <span className='fw-bold'>Address:</span>{' '}
+                <span className='d-grid ms-3'>
+                  <span>Lane 1 {studentData.line1}</span>
+                  <span>Lane 2 {studentData.line2}</span>
+                  <span>State {studentData.state}</span>
+                  <span>City{studentData.city}</span>
+                  <span>Pin {studentData.pin}</span>
+                </span>
+              </div>
+              <div className='col-md-6 border p-4'>
+                <span>
+                  {' '}
+                  <span className='fw-bold'>Blood Group :</span>{' '}
+                  {studentData.bloodGroup}
+                </span>
+                <br />
+                <span>
+                  <span className='fw-bold'>Eyes :</span> {studentData.eyes}
+                </span>
+                <br />
+                <span>
+                  <span className='fw-bold'>Ears :</span> {studentData.ears}
+                </span>
+                <br />
+                <span>
+                  {' '}
+                  <span className='fw-bold'>Allergic To :</span>{' '}
+                  {studentData.alergetic}
+                </span>
               </div>
             </div>
           </div>
