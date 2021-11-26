@@ -68,13 +68,25 @@ const StudentsBioData = () => {
       },
       prefill: {
         name,
-        email: 'sdfdsjfh2@ndsfdf.com',
+        email: 'harvindersb@gmail.com',
         phone_number: '9899999999',
       },
     };
     const paymentObject = new window.Razorpay(options);
     paymentObject.open();
   }
+
+  // const [studentsProfile, setStudentsProfile] = useState();
+  // console.log(
+  //   '🚀 ~ file: StudentsBioData.js ~ line 82 ~ StudentsBioData ~ studentsProfile',
+  //   studentsProfile
+  // );
+
+  // useEffect(() => {
+  //   fetch('http://13.126.35.191:9182/sms/pp/user/student/profile')
+  //     .then((res) => res.json())
+  //     .then((data) => setStudentsProfile(data));
+  // }, []);
 
   return (
     <section>
